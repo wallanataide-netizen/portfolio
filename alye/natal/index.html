@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Campanha de Natal · Alyê Parfum · Wallan Estúdio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@400;500&display=swap">
+<style>
+html,body{margin:0;height:100%;background:#1E1A17;overflow:hidden;font-family:'Jost',Arial,sans-serif}
+#viewport{position:fixed;inset:0 0 64px 0;display:flex;align-items:center;justify-content:center}
+#stage{width:1920px;height:1080px;position:relative;flex:none;transform-origin:center center;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+#stage>section{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;display:none}
+#stage>section.active{display:flex}
+#stage>section.cover.active{flex-direction:row}
+section {
+  background: #F6F1E9;
+  color: #2B2622;
+  font-family: 'Jost', Arial, sans-serif;
+  padding: 128px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+section.alt { background: #ECE4D7; }
+section.dark { background: #2B2622; color: #F6F1E9; }
+section.wine { background: #6E1F2F; color: #F6F1E9; }
+
+.eyebrow {
+  font-size: 24px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8A6A32;
+  font-weight: 500;
+  margin: 0 0 20px;
+}
+section.dark .eyebrow, section.wine .eyebrow { color: #D9B97A; }
+
+h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 500;
+  font-size: 120px;
+  line-height: 1.0;
+  margin: 0;
+}
+h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 1.05;
+  margin: 0 0 48px;
+}
+h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 1.1;
+  margin: 0 0 8px;
+}
+p { font-size: 32px; line-height: 1.4; margin: 0; color: #4E453D; }
+section.dark p, section.wine p { color: #E6DCCD; }
+.small { font-size: 24px; line-height: 1.4; }
+
+/* Capa */
+section.cover { padding: 0; flex-direction: row; background: #2B2622; color: #F6F1E9; }
+.cover-text { width: 1000px; padding: 128px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; }
+.cover-text p { color: #E6DCCD; }
+.cover-text .lede { margin-top: 40px; max-width: 720px; }
+.cover-img { width: 920px; height: 1080px; object-fit: cover; }
+.signature { font-size: 24px; color: #CFC3B2; }
+
+/* Cards */
+.cards { display: flex; gap: 32px; }
+.card { flex: 1; background: #FBF8F3; border: 1px solid #E2D8C8; padding: 48px 40px; }
+.card .num { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 72px; color: #8A6A32; line-height: 1; margin-bottom: 24px; }
+.card p { font-size: 24px; }
+.card h3 { margin-bottom: 16px; }
+
+/* Produtos */
+.prod { flex: 1; background: #FBF8F3; border: 1px solid #E2D8C8; display: flex; flex-direction: column; }
+.prod img { width: 100%; height: 400px; object-fit: cover; object-position: center 55%; }
+.prod-body { padding: 28px 32px 32px; }
+.prod .vol { font-size: 24px; color: #8A6A32; letter-spacing: 0.08em; margin-bottom: 12px; }
+.prod .who { font-size: 24px; line-height: 1.4; }
+
+/* Split */
+.split { display: flex; gap: 96px; flex: 1; align-items: center; }
+.split-text { flex: 1; }
+.split img { width: 620px; height: 824px; object-fit: cover; }
+.bullets { font-size: 32px; line-height: 1.4; padding-left: 36px; margin: 0; color: #4E453D; }
+.bullets li { margin-bottom: 20px; }
+
+/* Tabela */
+table { border-collapse: collapse; width: 100%; }
+th { font-size: 24px; text-align: left; letter-spacing: 0.12em; text-transform: uppercase; color: #8A6A32; font-weight: 500; padding: 0 24px 16px 0; border-bottom: 2px solid #2B2622; }
+td { font-size: 28px; line-height: 1.35; padding: 22px 24px 22px 0; border-bottom: 1px solid #D6CBB9; vertical-align: top; color: #4E453D; }
+td.key { font-weight: 500; color: #2B2622; white-space: nowrap; }
+.voice { margin-top: 36px; font-size: 28px; font-style: italic; color: #2B2622; }
+
+/* Fechamento */
+.close-row { display: flex; gap: 96px; align-items: center; flex: 1; }
+.close-row img { width: 640px; height: 440px; object-fit: contain; background: #F6F1E9; }
+.contact { margin-top: 48px; font-size: 28px; line-height: 1.6; }
+
+/* Movimento */
+@keyframes rise { from { opacity: 0; transform: translateY(24px); } }
+.rise { animation: rise 0.6s ease-out both; }
+.rise.d1 { animation-delay: 0.15s; }
+.rise.d2 { animation-delay: 0.3s; }
+.rise.d3 { animation-delay: 0.45s; }
+
+/* Natal prime */
+section.cover { background: #4A1420; }
+.gold { color: #E2C27D; font-style: italic; }
+.frame { position: absolute; top: 40px; left: 40px; width: 1840px; height: 1000px; box-sizing: border-box; border: 2px solid #C9A45C; opacity: 0.75; }
+.ornaments { position: absolute; top: 0; width: 440px; height: 320px; }
+.sparkles { position: absolute; width: 320px; height: 80px; }
+@keyframes drop { from { opacity: 0; transform: translateY(-120px); } }
+@keyframes glow { from { opacity: 0; transform: scale(0.6); } }
+.drop { animation: drop 1s cubic-bezier(.2,.8,.2,1) both; }
+.glow { animation: glow 0.9s ease-out 0.4s both; }
+
+.card .vol { font-size: 24px; color: #8A6A32; letter-spacing: 0.08em; margin-bottom: 12px; }
+
+/* Botão de anotações */
+.notes-btn { position: absolute; right: 72px; bottom: 52px; width: 300px; box-sizing: border-box; margin: 0; font-size: 24px; font-weight: 500; text-align: center; background: #C9A45C; color: #2B2622; padding: 12px 24px; border-radius: 40px; }
+.notes-btn a { color: #2B2622; }
+
+button.notes-btn{border:none;cursor:pointer;font-family:'Jost',Arial,sans-serif}
+#bar{position:fixed;left:0;right:0;bottom:0;height:64px;display:flex;align-items:center;justify-content:center;gap:12px;background:#14110F;color:#E6DCCD;font-size:15px}
+#bar button{background:none;border:1px solid #5a4d40;color:#E6DCCD;border-radius:22px;height:40px;min-width:44px;padding:0 16px;font:inherit;cursor:pointer}
+#bar button.gold{background:#C9A45C;border-color:#C9A45C;color:#2B2622;font-weight:500}
+#count{min-width:64px;text-align:center}
+#panel{position:fixed;top:0;right:0;bottom:64px;width:min(440px,100%);background:#F6F1E9;color:#2B2622;box-shadow:-10px 0 40px rgba(0,0,0,.35);transform:translateX(105%);transition:transform .3s;display:flex;flex-direction:column;z-index:5}
+#panel.open{transform:none}
+#panel header{padding:20px 22px 8px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+#panel h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;line-height:1.1;margin:4px 0 0;font-weight:600}
+#panel .ey{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#8A6A32}
+#panel .x{border:none;background:none;font-size:28px;cursor:pointer;color:#2B2622;line-height:1}
+#panel .inner{padding:0 22px 20px;overflow:auto;flex:1;display:flex;flex-direction:column;gap:12px}
+#panel .obs{font-size:15px;line-height:1.5;color:#4E453D;background:#ECE4D7;border-radius:10px;padding:12px 14px}
+#panel label{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#8A6A32}
+#panel textarea{min-height:200px;flex:1;font:16px/1.5 'Jost',Arial,sans-serif;border:1px solid #D6CBB9;border-radius:10px;padding:12px;background:#FBF8F3;color:#2B2622;resize:vertical}
+#panel .acts{display:flex;flex-direction:column;gap:8px}
+#panel .acts button{height:44px;border-radius:22px;font:500 15px 'Jost',Arial,sans-serif;cursor:pointer;border:1px solid #2B2622;background:none;color:#2B2622}
+#panel .acts button.wa{background:#2B2622;color:#F6F1E9}
+#saved{font-size:13px;color:#8A6A32;min-height:16px}
+@media (max-width:600px){#bar .hide-sm{display:none}}
+</style></head><body>
+<div id="viewport"><div id="stage">
+<section id="capa" class="cover" data-transition="fade">
+<div class="cover-text">
+<div>
+<p class="eyebrow">Alyê Parfum · Campanha de Natal 2026</p>
+<h1 class="rise">Um presente para cada <span class="gold">história</span></h1>
+<p class="lede rise d1">A primeira campanha do nosso plano anual: apresentar a marca Alyê e lançar sua primeira coleção no Natal.</p>
+</div>
+<p class="signature">Wallan Estúdio · Produção audiovisual · Wallan Ataíde</p>
+</div>
+<img class="cover-img" src="img/disparatte.jpg" alt="Disparatte 100 ml e 50 ml em cenário de pedra clara com flores">
+<div class="frame"></div>
+<svg class="ornaments drop" style="left:1440px" aria-label="Bolas de Natal douradas penduradas" width="440" height="320" viewBox="0 0 440 320"><defs><radialGradient id="gbcapa" cx="35%" cy="32%" r="75%"><stop offset="0" stop-color="#F6E6B4"/><stop offset="0.5" stop-color="#C9A45C"/><stop offset="1" stop-color="#6E5020"/></radialGradient></defs><g stroke="#C9A45C" stroke-width="2"><line x1="60" y1="0" x2="60" y2="150"/><line x1="200" y1="0" x2="200" y2="80"/><line x1="330" y1="0" x2="330" y2="190"/><line x1="410" y1="0" x2="410" y2="112"/></g><g fill="#B8914A"><rect x="52" y="148" width="16" height="14" rx="2"/><rect x="190" y="78" width="20" height="16" rx="2"/><rect x="323" y="188" width="14" height="12" rx="2"/><rect x="404" y="110" width="12" height="10" rx="2"/></g><g fill="url(#gbcapa)"><circle cx="60" cy="196" r="34"/><circle cx="200" cy="140" r="48"/><circle cx="330" cy="226" r="28"/><circle cx="410" cy="138" r="18"/></g></svg>
+<svg class="sparkles glow" style="top:52px;left:680px" aria-label="Brilhos dourados" width="320" height="80" viewBox="0 0 320 80"><g fill="#E2C27D"><path transform="translate(30,40)" d="M0,-20 C3,-3 3,-3 20,0 C3,3 3,3 0,20 C-3,3 -3,3 -20,0 C-3,-3 -3,-3 0,-20Z"/><path transform="translate(110,22) scale(0.55)" d="M0,-20 C3,-3 3,-3 20,0 C3,3 3,3 0,20 C-3,3 -3,3 -20,0 C-3,-3 -3,-3 0,-20Z"/><path transform="translate(185,52) scale(0.8)" d="M0,-20 C3,-3 3,-3 20,0 C3,3 3,3 0,20 C-3,3 -3,3 -20,0 C-3,-3 -3,-3 0,-20Z"/><path transform="translate(265,28) scale(0.45)" d="M0,-20 C3,-3 3,-3 20,0 C3,3 3,3 0,20 C-3,3 -3,3 -20,0 C-3,-3 -3,-3 0,-20Z"/></g></svg>
+<button class="notes-btn" onclick="openNotes()">Abrir anotações</button>
+
+</section>
+<section id="objetivo">
+<p class="eyebrow">O objetivo</p>
+<h2>O que esta campanha precisa fazer</h2>
+<div class="cards" style="flex:1;align-items:stretch">
+<div class="card rise"><p class="num">01</p><h3>Apresentar a marca</h3><p>A Alyê ainda não é conhecida. O Natal é a vitrine para mostrar quem ela é: elegante, artesanal, feita para presentear.</p></div>
+<div class="card rise d1"><p class="num">02</p><h3>Lançar a coleção</h3><p>Apresentar os sete lançamentos juntos, cada um ligado a um perfil de pessoa.</p></div>
+<div class="card rise d2"><p class="num">03</p><h3>Preparar a revenda</h3><p>Com a marca conhecida, os revendedores chegam mais fácil. Fotos e artes já ficam prontas para essa próxima etapa.</p></div>
+</div>
+<button class="notes-btn" onclick="openNotes()">Abrir anotações</button>
+
+</section>
+<section id="fases" class="alt">
+<p class="eyebrow">Como a marca chega ao público</p>
+<h2>Três momentos até o Natal</h2>
+<div class="cards" style="flex:1;align-items:stretch">
+<div class="card rise"><p class="num">01</p><p class="vol">Expectativa · até 03/12</p><h3>O teaser</h3><p>O vídeo de expectativa, já pronto, mostra só as sombras dos frascos, sem revelar a coleção. Ele funciona como convite para o lançamento.</p></div>
+<div class="card rise d1"><p class="num">02</p><p class="vol">Lançamento · 03/12</p><h3>O coquetel</h3><p>Coquetel de lançamento da marca Alyê. É o momento em que a coleção é revelada.</p></div>
+<div class="card rise d2"><p class="num">03</p><p class="vol">Campanha · 04 a 24/12</p><h3>Presentes que ficam</h3><p>Com a marca apresentada, entra a campanha de Natal: vídeo, fotos e artes.</p></div>
+</div>
+<button class="notes-btn" onclick="openNotes()">Abrir anotações</button>
+
+</section>
+<section id="conceito" class="wine" data-transition="fade">
+<div class="split">
+<div class="split-text">
+<p class="eyebrow">O conceito</p>
+<h1 class="rise">Presentes que <span class="gold">ficam.</span></h1>
+<p class="rise d1" style="margin-top:48px">Perfume é o presente que acompanha a pessoa todos os dias. A Alyê chega ao Natal como a marca desse presente: para cada pessoa que você ama, uma Alyê.</p>
+<p class="rise d2" style="margin-top:32px">O fio condutor é o gesto de presentear: escolher, embrulhar na sacola dourada, entregar.</p>
+</div>
+<img src="img/sacola.jpg" alt="Sacola Alyê Parfum com logo em folha dourada">
+</div>
+<div class="frame"></div>
+<svg class="sparkles glow" style="top:52px;left:128px" aria-label="Brilhos dourados" width="320" height="80" viewBox="0 0 320 80"><g fill="#E2C27D"><path transform="translate(30,40)" d="M0,-20 C3,-3 3,-3 20,0 C3,3 3,3 0,20 C-3,3 -3,3 -20,0 C-3,-3 -3,-3 0,-20Z"/><path transform="translate(110,22) scale(0.55)" d="M0,-20 C3,-3 3,-3 20,0 C3,3 3,3 0,20 C-3,3 -3,3 -20,0 C-3,-3 -3,-3 0,-20Z"/><path transform="translate(185,52) scale(0.8)" d="M0,-20 C3,-3 3,-3 20,0 C3,3 3,3 0,20 C-3,3 -3,3 -20,0 C-3,-3 -3,-3 0,-20Z"/><path transform="translate(265,28) scale(0.45)" d="M0,-20 C3,-3 3,-3 20,0 C3,3 3,3 0,20 C-3,3 -3,3 -20,0 C-3,-3 -3,-3 0,-20Z"/></g></svg>
+<button class="notes-btn" onclick="openNotes()">Abrir anotações</button>
+
+</section>
+<section id="colecao-1" class="alt">
+<p class="eyebrow">Os 7 lançamentos · 1 de 2</p>
+<h2>Para cada pessoa, uma Alyê</h2>
+<div class="cards">
+<div class="prod"><img src="img/disparatte.jpg" alt="Disparatte"><div class="prod-body"><h3>Disparatte</h3><p class="vol">100 ml · 50 ml</p><p class="who">Para a mulher que ilumina a casa: mãe, esposa.</p></div></div>
+<div class="prod"><img src="img/valen.jpg" alt="Valen"><div class="prod-body"><h3>Valen</h3><p class="vol">100 ml · 50 ml</p><p class="who">Para a namorada, a filha, a amiga romântica.</p></div></div>
+<div class="prod"><img src="img/brutus.jpg" alt="Brutus"><div class="prod-body"><h3>Brutus</h3><p class="vol">100 ml</p><p class="who">Para ele: pai, marido, irmão. Intenso.</p></div></div>
+<div class="prod"><img src="img/cecilia.jpg" alt="Cecília"><div class="prod-body"><h3>Cecília</h3><p class="vol">50 ml</p><p class="who">Artesanal e delicado. Para madrinha, amigo secreto.</p></div></div>
+</div>
+<button class="notes-btn" onclick="openNotes()">Abrir anotações</button>
+
+</section>
+<section id="colecao-2" class="alt">
+<p class="eyebrow">Os 7 lançamentos · 2 de 2</p>
+<h2>Mais três opções para o catálogo</h2>
+<div class="cards">
+<div class="prod"><img src="img/solaria.jpg" alt="Solaria 100 ml e 50 ml"><div class="prod-body"><h3>Solaria</h3><p class="vol">100 ml · 50 ml</p><p class="who">Solar. Para quem já pensa no Réveillon.</p></div></div>
+<div class="prod"><img src="img/parisgirl.jpg" alt="Paris Girl"><div class="prod-body"><h3>Paris Girl</h3><p class="vol">100 ml</p><p class="who">Para a jovem chique, que ama moda.</p></div></div>
+<div class="prod"><img src="img/peligro.jpg" alt="Peligro"><div class="prod-body"><h3>Peligro</h3><p class="vol">100 ml · 50 ml</p><p class="who">Para quem gosta de marcar presença à noite.</p></div></div>
+</div>
+<button class="notes-btn" onclick="openNotes()">Abrir anotações</button>
+
+</section>
+<section id="video">
+<p class="eyebrow">Entrega 1 · Vídeo institucional · 30 a 45 s</p>
+<h2>Roteiro: “O embrulho”</h2>
+<table>
+<tr><th>Tempo</th><th>Cena</th><th>O que se vê</th></tr>
+<tr><td class="key">0–5 s</td><td class="key">Abertura</td><td>Luzes de Natal desfocadas. Folhas douradas do logo Alyê surgem na tela.</td></tr>
+<tr><td class="key">5–20 s</td><td class="key">A coleção</td><td>Os sete frascos em sequência, cada um ligado a alguém: mãe, namorada, pai. Macro do borrifo.</td></tr>
+<tr><td class="key">20–35 s</td><td class="key">A entrega</td><td>Mãos embalam o perfume na sacola dourada. O presente é entregue: reação, abraço, close no frasco.</td></tr>
+<tr><td class="key">35–45 s</td><td class="key">Assinatura</td><td>As sete fragrâncias juntas sob luzes douradas. Logo Alyê e a frase final.</td></tr>
+</table>
+<p class="voice">Locução final: “Alyê Parfum. Presentes que ficam.”</p>
+<button class="notes-btn" onclick="openNotes()">Abrir anotações</button>
+
+</section>
+<section id="fotos" class="alt">
+<div class="split">
+<div class="split-text">
+<p class="eyebrow">Entrega 2 · Fotos estratégicas</p>
+<h2>Fotos que apresentam a marca</h2>
+<ul class="bullets">
+<li>Still de cada lançamento em cenário de Natal</li>
+<li>Foto de catálogo de cada frasco em fundo neutro, pronta para o WhatsApp</li>
+<li>A coleção completa reunida, como vitrine</li>
+<li>Presente embalado na sacola Alyê e cena de entrega</li>
+</ul>
+</div>
+<img src="img/brutus.jpg" alt="Brutus em cenário de pedra escura, referência de still de produto">
+</div>
+<button class="notes-btn" onclick="openNotes()">Abrir anotações</button>
+
+</section>
+<section id="artes">
+<p class="eyebrow">Entrega 3 · 4 artes profissionais</p>
+<h2>Artes que contam quem é a Alyê</h2>
+<div class="cards" style="flex:1;align-items:stretch">
+<div class="card rise"><p class="num">1</p><h3>Conheça a Alyê</h3><p>Apresentação da marca no feed (4:5): a essência, as folhas douradas, o cuidado artesanal.</p></div>
+<div class="card rise d1"><p class="num">2</p><h3>Os 7 lançamentos</h3><p>Carrossel com a coleção completa, um frasco por página.</p></div>
+<div class="card rise d2"><p class="num">3</p><h3>Guia de presentes</h3><p>Stories 9:16: qual Alyê combina com quem você ama.</p></div>
+<div class="card rise d3"><p class="num">4</p><h3>Feliz Natal</h3><p>Arte institucional para o dia 25, com a sacola dourada.</p></div>
+</div>
+<button class="notes-btn" onclick="openNotes()">Abrir anotações</button>
+
+</section>
+<section id="cronograma" class="alt">
+<p class="eyebrow">Cronograma proposto</p>
+<h2>Do sim ao dia 25</h2>
+<table>
+<tr><th>Quando</th><th>O quê</th></tr>
+<tr><td class="key">18 a 21/11</td><td>Aprovação do conceito, do roteiro e dos perfis de presente</td></tr>
+<tr><td class="key">Até 03/12</td><td>Teaser de expectativa no ar, como convite para o lançamento</td></tr>
+<tr><td class="key">24 a 26/11</td><td>Diária de gravação do vídeo e sessão de fotos</td></tr>
+<tr><td class="key">27/11 a 02/12</td><td>Edição do vídeo, tratamento das fotos e criação das artes</td></tr>
+<tr><td class="key">03/12</td><td>Coquetel de lançamento da marca Alyê</td></tr>
+<tr><td class="key">04 a 24/12</td><td>Campanha de Natal no ar, com pico entre 15 e 23/12</td></tr>
+<tr><td class="key">25/12</td><td>Arte institucional de Feliz Natal</td></tr>
+</table>
+<button class="notes-btn" onclick="openNotes()">Abrir anotações</button>
+
+</section>
+<section id="precisamos">
+<p class="eyebrow">Para começar</p>
+<h2>O que precisamos da Alyê</h2>
+<div style="display:flex;gap:96px">
+<ul class="bullets" style="flex:1">
+<li>A história da marca: origem, nome, o que a Alyê representa</li>
+<li>Onde o público compra: WhatsApp, Instagram, loja</li>
+<li>Notas olfativas e público de cada fragrância</li>
+</ul>
+<ul class="bullets" style="flex:1">
+<li>Frascos e sacolas para a gravação e as fotos</li>
+<li>Local da gravação e modelo(s): [a definir]</li>
+<li>Aprovação do roteiro até [data]</li>
+</ul>
+</div>
+<button class="notes-btn" onclick="openNotes()">Abrir anotações</button>
+
+</section>
+<section id="fechamento" class="dark">
+<div class="close-row">
+<div style="flex:1">
+<p class="eyebrow">Natal Alyê 2026</p>
+<h1 class="rise">Vamos <span class="gold">começar?</span></h1>
+<p class="contact rise d1">Wallan Ataíde · Wallan Estúdio<br>(84) 98779-5227<br>wallanataide@gmail.com<br>@wallan_estudio</p>
+</div>
+<img src="img/logo.jpg" alt="Logo Alyê Parfum">
+</div>
+<div class="frame"></div>
+<svg class="ornaments drop" style="left:1320px" aria-label="Bolas de Natal douradas penduradas" width="440" height="320" viewBox="0 0 440 320"><defs><radialGradient id="gbfim" cx="35%" cy="32%" r="75%"><stop offset="0" stop-color="#F6E6B4"/><stop offset="0.5" stop-color="#C9A45C"/><stop offset="1" stop-color="#6E5020"/></radialGradient></defs><g stroke="#C9A45C" stroke-width="2"><line x1="60" y1="0" x2="60" y2="150"/><line x1="200" y1="0" x2="200" y2="80"/><line x1="330" y1="0" x2="330" y2="190"/><line x1="410" y1="0" x2="410" y2="112"/></g><g fill="#B8914A"><rect x="52" y="148" width="16" height="14" rx="2"/><rect x="190" y="78" width="20" height="16" rx="2"/><rect x="323" y="188" width="14" height="12" rx="2"/><rect x="404" y="110" width="12" height="10" rx="2"/></g><g fill="url(#gbfim)"><circle cx="60" cy="196" r="34"/><circle cx="200" cy="140" r="48"/><circle cx="330" cy="226" r="28"/><circle cx="410" cy="138" r="18"/></g></svg>
+<button class="notes-btn" onclick="openNotes()">Abrir anotações</button>
+
+</section>
+</div></div>
+<div id="panel" aria-hidden="true">
+<header><div><div class="ey" id="pnum"></div><h2 id="ptitle"></h2></div><button class="x" onclick="closeNotes()" aria-label="Fechar">×</button></header>
+<div class="inner">
+<div class="obs" id="pobs"></div>
+<label for="ptext">Anotações da reunião</label>
+<textarea id="ptext" placeholder="Escreva aqui o que for debatido neste slide…"></textarea>
+<div id="saved"></div>
+<div class="acts"><button class="wa" onclick="sendWA()">Enviar todas as anotações pelo WhatsApp</button><button onclick="copyAll()">Copiar todas as anotações</button></div>
+</div></div>
+<div id="bar">
+<button onclick="go(cur-1)" aria-label="Anterior">‹</button>
+<span id="count"></span>
+<button onclick="go(cur+1)" aria-label="Próximo">›</button>
+<button class="gold" onclick="toggleNotes()">Anotações</button>
+<button class="hide-sm" onclick="fs()">Tela cheia</button>
+</div>
+<script>
+const META=[{"id": "capa", "title": "Um presente para cada história", "obs": "Primeira campanha do calendário do plano anual. Como é o primeiro lançamento da Alyê, o foco é tornar a marca conhecida."}, {"id": "objetivo", "title": "O que esta campanha precisa fazer", "obs": "Primeiro a marca, depois a revenda. Uma marca que o cliente já reconhece é mais fácil de vender, e isso ajuda a atrair revendedores na próxima campanha."}, {"id": "fases", "title": "Três momentos até o Natal", "obs": "O teaser cria curiosidade, o coquetel apresenta a marca e a campanha de Natal mantém a Alyê em evidência até o dia 24."}, {"id": "conceito", "title": "Presentes que ficam.", "obs": "A sacola é parte do conceito: ela aparece no vídeo, nas fotos e nas artes como assinatura do presente Alyê."}, {"id": "colecao-1", "title": "Para cada pessoa, uma Alyê", "obs": "Os perfis de presente são uma proposta inicial e serão ajustados de acordo com as notas olfativas e o público de cada fragrância."}, {"id": "colecao-2", "title": "Mais três opções para o catálogo", "obs": "Todas as sete fragrâncias são lançamentos desta primeira campanha. Os perfis também serão ajustados conforme as notas e o público de cada uma."}, {"id": "video", "title": "Roteiro: “O embrulho”", "obs": "Um vídeo de marca: apresenta a Alyê, a coleção e o gesto de presentear, sem chamada de venda. Versões: 16:9 para site e YouTube, 9:16 para Reels e stories. Locução gravada pelo Wallan Estúdio."}, {"id": "fotos", "title": "Fotos que apresentam a marca", "obs": "Referência de qualidade: os stills que a Alyê já tem do Brutus e do Disparatte. A ideia é levar esse padrão para um cenário natalino. As fotos de catálogo também servem depois para a revenda."}, {"id": "artes", "title": "Artes que contam quem é a Alyê", "obs": "Formatos do plano: 4:5 para feed, 9:16 para Reels e stories, 16:9 para site. O guia de presentes também pode ser usado depois pelos revendedores."}, {"id": "cronograma", "title": "Do sim ao dia 25", "obs": "As datas dependem da aprovação do conceito e do roteiro. O teaser já está pronto e funciona como convite para o coquetel de 03/12. A campanha de Natal entra logo depois do lançamento. A campanha de revenda pode vir na sequência. A Black Friday (27/11) também está no calendário do plano anual e pode ser tratada à parte."}, {"id": "precisamos", "title": "O que precisamos da Alyê", "obs": "Com estes pontos definidos até 21/11, a gravação se mantém entre 24 e 26/11."}, {"id": "fechamento", "title": "Vamos começar?", "obs": "Próximos passos: aprovação do conceito e do roteiro, e definição da data da gravação."}];
+const secs=[...document.querySelectorAll('#stage>section')];
+let cur=0;
+const KEY=id=>'alye-natal-notas-'+id;
+function load(id){try{return localStorage.getItem(KEY(id))||''}catch(e){return ''}}
+function save(id,v){try{localStorage.setItem(KEY(id),v)}catch(e){}}
+function fit(){const vp=document.getElementById('viewport');const s=Math.min(vp.clientWidth/1920,vp.clientHeight/1080);document.getElementById('stage').style.transform='scale('+s+')';}
+function go(i){if(i<0||i>=secs.length)return;secs[cur].classList.remove('active');cur=i;secs[cur].classList.add('active');document.getElementById('count').textContent=(cur+1)+' / '+secs.length;history.replaceState(null,'','#'+(cur+1));fillPanel();}
+function fillPanel(){const m=META[cur];document.getElementById('pnum').textContent='Slide '+(cur+1);document.getElementById('ptitle').textContent=m.title;document.getElementById('pobs').textContent=m.obs;document.getElementById('ptext').value=load(m.id);document.getElementById('saved').textContent='';}
+function openNotes(){fillPanel();document.getElementById('panel').classList.add('open');}
+function closeNotes(){document.getElementById('panel').classList.remove('open');}
+function toggleNotes(){document.getElementById('panel').classList.contains('open')?closeNotes():openNotes();}
+document.getElementById('ptext').addEventListener('input',e=>{save(META[cur].id,e.target.value);document.getElementById('saved').textContent='Salvo neste aparelho';});
+function allNotes(){let t='Anotações · Campanha de Natal Alyê\n';META.forEach((m,i)=>{const v=load(m.id).trim();if(v)t+='\n*'+(i+1)+'. '+m.title+'*\n'+v+'\n';});return t;}
+function sendWA(){window.open('https://wa.me/5584987795227?text='+encodeURIComponent(allNotes()),'_blank');}
+function copyAll(){const t=allNotes();(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{document.getElementById('saved').textContent='Copiado';}).catch(()=>{prompt('Copie as anotações:',t);});}
+function fs(){const d=document.documentElement;if(!document.fullscreenElement&&d.requestFullscreen)d.requestFullscreen();else if(document.exitFullscreen)document.exitFullscreen();}
+document.addEventListener('keydown',e=>{if(e.target.tagName==='TEXTAREA')return;if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();go(cur+1)}if(['ArrowLeft','PageUp'].includes(e.key))go(cur-1);});
+let tx=null;document.getElementById('viewport').addEventListener('touchstart',e=>{tx=e.touches[0].clientX},{passive:true});
+document.getElementById('viewport').addEventListener('touchend',e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50)go(cur+(dx<0?1:-1));tx=null;});
+window.addEventListener('resize',fit);fit();
+const start=parseInt(location.hash.slice(1))-1;secs[0].classList.add('active');go(isNaN(start)?0:Math.max(0,Math.min(start,secs.length-1)));
+</script>
+</body></html>
