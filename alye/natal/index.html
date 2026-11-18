@@ -125,6 +125,20 @@ section.cover { background: #4A1420; }
 .notes-btn { position: absolute; right: 72px; bottom: 52px; width: 300px; box-sizing: border-box; margin: 0; font-size: 24px; font-weight: 500; text-align: center; background: #C9A45C; color: #2B2622; padding: 12px 24px; border-radius: 40px; }
 .notes-btn a { color: #2B2622; }
 
+/* Ficha de produção */
+.char { flex: 1; background: #FBF8F3; border: 1px solid #E2D8C8; padding: 40px 36px; }
+.char h3 { margin-bottom: 8px; }
+.char .role { font-size: 24px; color: #8A6A32; letter-spacing: 0.06em; margin-bottom: 16px; }
+.char .desc { font-size: 24px; line-height: 1.4; }
+.foot { margin-top: 40px; font-size: 24px; line-height: 1.4; }
+.cols { display: flex; gap: 96px; }
+.cols > div { flex: 1; }
+.cols h3 { margin-bottom: 20px; }
+.bullets.sm { font-size: 28px; }
+.bullets.sm li { margin-bottom: 16px; }
+table.compact td { font-size: 24px; padding: 10px 24px 10px 0; }
+.cols > ul { flex: 1; }
+
 button.notes-btn{border:none;cursor:pointer;font-family:'Jost',Arial,sans-serif}
 #bar{position:fixed;left:0;right:0;bottom:0;height:64px;display:flex;align-items:center;justify-content:center;gap:12px;background:#14110F;color:#E6DCCD;font-size:15px}
 #bar button{background:none;border:1px solid #5a4d40;color:#E6DCCD;border-radius:22px;height:40px;min-width:44px;padding:0 16px;font:inherit;cursor:pointer}
@@ -224,16 +238,101 @@ button.notes-btn{border:none;cursor:pointer;font-family:'Jost',Arial,sans-serif}
 
 </section>
 <section id="video">
-<p class="eyebrow">Entrega 1 · Vídeo institucional · 30 a 45 s</p>
-<h2>Roteiro: “O embrulho”</h2>
+<p class="eyebrow">Entrega 1 · Vídeo institucional · 45 s · 1 de 2</p>
+<h2>Roteiro: “Natal em família”</h2>
 <table>
 <tr><th>Tempo</th><th>Cena</th><th>O que se vê</th></tr>
-<tr><td class="key">0–5 s</td><td class="key">Abertura</td><td>Luzes de Natal desfocadas. Folhas douradas do logo Alyê surgem na tela.</td></tr>
-<tr><td class="key">5–20 s</td><td class="key">A coleção</td><td>Os sete frascos em sequência, cada um ligado a alguém: mãe, namorada, pai. Macro do borrifo.</td></tr>
-<tr><td class="key">20–35 s</td><td class="key">A entrega</td><td>Mãos embalam o perfume na sacola dourada. O presente é entregue: reação, abraço, close no frasco.</td></tr>
-<tr><td class="key">35–45 s</td><td class="key">Assinatura</td><td>As sete fragrâncias juntas sob luzes douradas. Logo Alyê e a frase final.</td></tr>
+<tr><td class="key">0–5 s</td><td class="key">Abertura</td><td>Luzes da árvore desfocadas. A mesa da ceia posta, velas acesas. As sacolas Alyê esperam ao lado dos pratos.</td></tr>
+<tr><td class="key">5–15 s</td><td class="key">A família</td><td>Pai, mãe e os dois filhos chegam à mesa. A menina esconde uma sacola atrás das costas; o menino carrega outra quase do tamanho dele.</td></tr>
+<tr><td class="key">15–30 s</td><td class="key">A troca</td><td>As crianças entregam os presentes. O pai abre o Brutus, a mãe abre o Disparatte. Macro do frasco na luz das velas e do borrifo no pulso.</td></tr>
 </table>
-<p class="voice">Locução final: “Alyê Parfum. Presentes que ficam.”</p>
+<button class="notes-btn" onclick="openNotes()">Abrir anotações</button>
+
+</section>
+<section id="video-2">
+<p class="eyebrow">Entrega 1 · Vídeo institucional · 45 s · 2 de 2</p>
+<h2>Roteiro: o abraço e a assinatura</h2>
+<table>
+<tr><th>Tempo</th><th>Cena</th><th>O que se vê</th></tr>
+<tr><td class="key">30–40 s</td><td class="key">O abraço</td><td>A menina sente o perfume no pulso da mãe e sorri. O menino se joga no colo do pai. Abraço dos quatro; a câmera se afasta e mostra a mesa.</td></tr>
+<tr><td class="key">40–45 s</td><td class="key">Assinatura</td><td>Os frascos sobre a mesa, entre velas e enfeites dourados. Logo Alyê e a frase final.</td></tr>
+</table>
+<p class="voice">Locução sugerida: “Natal é estar junto. É lembrar de quem a gente ama. Alyê Parfum. Presentes que ficam.”</p>
+<button class="notes-btn" onclick="openNotes()">Abrir anotações</button>
+
+</section>
+<section id="personagens" class="alt">
+<p class="eyebrow">Ficha de produção · Personagens</p>
+<h2>A família</h2>
+<div class="cards">
+<div class="char rise"><h3>Pai</h3><p class="role">30 a 45 anos · recebe o Brutus</p><p class="desc">Suéter ou camisa em vinho, verde-escuro ou bege, com calça escura.</p></div>
+<div class="char rise d1"><h3>Mãe</h3><p class="role">30 a 45 anos · recebe o Disparatte</p><p class="desc">Vestido ou blusa em vinho, champanhe ou creme. Joias douradas discretas.</p></div>
+<div class="char rise d2"><h3>Menina</h3><p class="role">8 anos · entrega o presente à mãe</p><p class="desc">Vestido creme, vinho ou dourado. Laço ou tiara no cabelo.</p></div>
+<div class="char rise d3"><h3>Menino</h3><p class="role">4 anos · entrega o presente ao pai</p><p class="desc">Camisa clara com suspensório ou suéter liso em tom natalino.</p></div>
+</div>
+<p class="foot">Figurino nos tons da marca: vinho, verde-escuro, creme e dourado. Evitar preto, branco puro, estampas grandes e logos de outras marcas.</p>
+<button class="notes-btn" onclick="openNotes()">Abrir anotações</button>
+
+</section>
+<section id="cenario">
+<p class="eyebrow">Ficha de produção · Cenário</p>
+<h2>A ceia de Natal</h2>
+<div class="cols">
+<div><h3>A mesa</h3><ul class="bullets sm">
+<li>Toalha creme ou de linho, com caminho de mesa vinho</li>
+<li>Louça branca ou creme com detalhes dourados; taças e talheres dourados</li>
+<li>Arranjo central com folhagens, pinhas e velas</li>
+<li>Ceia cenográfica: panetone, frutas, rabanadas</li>
+<li>Lugares para quatro, com as sacolas Alyê ao lado dos pratos</li>
+</ul></div>
+<div><h3>O ambiente</h3><ul class="bullets sm">
+<li>Árvore de Natal ao fundo, com enfeites dourados, vinho e creme</li>
+<li>Pisca-pisca de luz amarela e quente, nunca colorido ou frio</li>
+<li>Velas de LED perto das crianças</li>
+<li>Espaço livre ao redor da mesa para câmera e luz</li>
+<li>Local: [casa / estúdio / a definir]</li>
+</ul></div>
+</div>
+<button class="notes-btn" onclick="openNotes()">Abrir anotações</button>
+
+</section>
+<section id="producao" class="alt">
+<p class="eyebrow">Ficha de produção · Levantamento</p>
+<h2>Lista de produção</h2>
+<table class="compact">
+<tr><th style="width:30%">Item</th><th style="width:48%">Detalhe</th><th>Quem providencia</th></tr>
+<tr><td class="key">Sacolas Alyê</td><td>4 na cena + 2 de reserva</td><td>Alyê</td></tr>
+<tr><td class="key">Brutus e Disparatte</td><td>Para a troca, com 1 frasco reserva de cada</td><td>Alyê</td></tr>
+<tr><td class="key">Os 7 frascos</td><td>Para o plano final na mesa</td><td>Alyê</td></tr>
+<tr><td class="key">Papel de seda e fita</td><td>Em vinho ou dourado, dentro das sacolas</td><td>[a definir]</td></tr>
+<tr><td class="key">Mesa posta</td><td>Toalha, louça, taças, arranjo e ceia cenográfica</td><td>[a definir]</td></tr>
+<tr><td class="key">Árvore e luzes</td><td>Luz quente, enfeites dourados e vinho</td><td>[a definir]</td></tr>
+<tr><td class="key">Locação</td><td>Sala de jantar com espaço para a equipe</td><td>[a definir]</td></tr>
+<tr><td class="key">Família</td><td>Pai, mãe, menina de 8 e menino de 4 anos</td><td>[a definir]</td></tr>
+<tr><td class="key">Figurino</td><td>Nos tons da marca, para os quatro</td><td>[a definir]</td></tr>
+<tr><td class="key">Autorização de imagem</td><td>Termo assinado por adultos e responsáveis</td><td>Wallan Estúdio</td></tr>
+<tr><td class="key">Câmera, luz e áudio</td><td>Equipe, equipamento e direção</td><td>Wallan Estúdio</td></tr>
+</table>
+<button class="notes-btn" onclick="openNotes()">Abrir anotações</button>
+
+</section>
+<section id="observacoes">
+<p class="eyebrow">Ficha de produção · Dia da gravação</p>
+<h2>Observações para a gravação</h2>
+<div class="cols">
+<ul class="bullets sm">
+<li>Cenas das crianças primeiro, em blocos curtos, com o responsável no set e pausas para lanche</li>
+<li>O menino de 4 anos tem liberdade na cena: a espontaneidade vale mais que a marcação</li>
+<li>Perfume borrifado só nos adultos; as crianças apenas sentem o cheiro</li>
+<li>Data: 24 a 26/11. Diária e horário: [a definir]</li>
+</ul>
+<ul class="bullets sm">
+<li>Frascos limpos com flanela antes de cada take, sem digitais nem reflexos</li>
+<li>Sacolas novas e sem amassados, com os laços prontos antes de começar</li>
+<li>Trilha instrumental natalina, com licença de uso</li>
+<li>Tudo montado e testado antes de a família chegar</li>
+</ul>
+</div>
 <button class="notes-btn" onclick="openNotes()">Abrir anotações</button>
 
 </section>
@@ -293,7 +392,7 @@ button.notes-btn{border:none;cursor:pointer;font-family:'Jost',Arial,sans-serif}
 </ul>
 <ul class="bullets" style="flex:1">
 <li>Frascos e sacolas para a gravação e as fotos</li>
-<li>Local da gravação e modelo(s): [a definir]</li>
+<li>Família e local da gravação: [a definir]</li>
 <li>Aprovação do roteiro até [data]</li>
 </ul>
 </div>
@@ -332,7 +431,7 @@ button.notes-btn{border:none;cursor:pointer;font-family:'Jost',Arial,sans-serif}
 <button class="hide-sm" onclick="fs()">Tela cheia</button>
 </div>
 <script>
-const META=[{"id": "capa", "title": "Um presente para cada história", "obs": "Primeira campanha do calendário do plano anual. Como é o primeiro lançamento da Alyê, o foco é tornar a marca conhecida."}, {"id": "objetivo", "title": "O que esta campanha precisa fazer", "obs": "Primeiro a marca, depois a revenda. Uma marca que o cliente já reconhece é mais fácil de vender, e isso ajuda a atrair revendedores na próxima campanha."}, {"id": "fases", "title": "Três momentos até o Natal", "obs": "O teaser cria curiosidade, o coquetel apresenta a marca e a campanha de Natal mantém a Alyê em evidência até o dia 24."}, {"id": "conceito", "title": "Presentes que ficam.", "obs": "A sacola é parte do conceito: ela aparece no vídeo, nas fotos e nas artes como assinatura do presente Alyê."}, {"id": "colecao-1", "title": "Para cada pessoa, uma Alyê", "obs": "Os perfis de presente são uma proposta inicial e serão ajustados de acordo com as notas olfativas e o público de cada fragrância."}, {"id": "colecao-2", "title": "Mais três opções para o catálogo", "obs": "Todas as sete fragrâncias são lançamentos desta primeira campanha. Os perfis também serão ajustados conforme as notas e o público de cada uma."}, {"id": "video", "title": "Roteiro: “O embrulho”", "obs": "Um vídeo de marca: apresenta a Alyê, a coleção e o gesto de presentear, sem chamada de venda. Versões: 16:9 para site e YouTube, 9:16 para Reels e stories. Locução gravada pelo Wallan Estúdio."}, {"id": "fotos", "title": "Fotos que apresentam a marca", "obs": "Referência de qualidade: os stills que a Alyê já tem do Brutus e do Disparatte. A ideia é levar esse padrão para um cenário natalino. As fotos de catálogo também servem depois para a revenda."}, {"id": "artes", "title": "Artes que contam quem é a Alyê", "obs": "Formatos do plano: 4:5 para feed, 9:16 para Reels e stories, 16:9 para site. O guia de presentes também pode ser usado depois pelos revendedores."}, {"id": "cronograma", "title": "Do sim ao dia 25", "obs": "As datas dependem da aprovação do conceito e do roteiro. O teaser já está pronto e funciona como convite para o coquetel de 03/12. A campanha de Natal entra logo depois do lançamento. A campanha de revenda pode vir na sequência. A Black Friday (27/11) também está no calendário do plano anual e pode ser tratada à parte."}, {"id": "precisamos", "title": "O que precisamos da Alyê", "obs": "Com estes pontos definidos até 21/11, a gravação se mantém entre 24 e 26/11."}, {"id": "fechamento", "title": "Vamos começar?", "obs": "Próximos passos: aprovação do conceito e do roteiro, e definição da data da gravação."}];
+const META=[{"id": "capa", "title": "Um presente para cada história", "obs": "Primeira campanha do calendário do plano anual. Como é o primeiro lançamento da Alyê, o foco é tornar a marca conhecida."}, {"id": "objetivo", "title": "O que esta campanha precisa fazer", "obs": "Primeiro a marca, depois a revenda. Uma marca que o cliente já reconhece é mais fácil de vender, e isso ajuda a atrair revendedores na próxima campanha."}, {"id": "fases", "title": "Três momentos até o Natal", "obs": "O teaser cria curiosidade, o coquetel apresenta a marca e a campanha de Natal mantém a Alyê em evidência até o dia 24."}, {"id": "conceito", "title": "Presentes que ficam.", "obs": "A sacola é parte do conceito: ela aparece no vídeo, nas fotos e nas artes como assinatura do presente Alyê."}, {"id": "colecao-1", "title": "Para cada pessoa, uma Alyê", "obs": "Os perfis de presente são uma proposta inicial e serão ajustados de acordo com as notas olfativas e o público de cada fragrância."}, {"id": "colecao-2", "title": "Mais três opções para o catálogo", "obs": "Todas as sete fragrâncias são lançamentos desta primeira campanha. Os perfis também serão ajustados conforme as notas e o público de cada uma."}, {"id": "video", "title": "Roteiro: “Natal em família”", "obs": "Natal é família. O vídeo mostra uma família reunida na ceia, trocando presentes nas sacolas Alyê, com os perfumes como símbolo do carinho entre eles."}, {"id": "video-2", "title": "Roteiro: o abraço e a assinatura", "obs": "Versões: 45 s em 16:9 para site e YouTube, e 9:16 para Reels e stories. Locução gravada pelo Wallan Estúdio, com trilha instrumental natalina."}, {"id": "personagens", "title": "A família", "obs": "Se possível, uma família de verdade (pais e filhos), porque a intimidade entre eles aparece na tela. Família: [a definir]."}, {"id": "cenario", "title": "A ceia de Natal", "obs": "As cores da mesa e da árvore seguem a sacola e os frascos (creme, vinho e dourado), para que a marca se destaque em todo o quadro."}, {"id": "producao", "title": "Lista de produção", "obs": "A coluna “Quem providencia” fica para a Alyê e o Wallan Estúdio definirem juntos."}, {"id": "observacoes", "title": "Observações para a gravação", "obs": "Com crianças pequenas, o tempo de atenção é curto. Deixar o cenário pronto antes da chegada da família poupa energia para as cenas."}, {"id": "fotos", "title": "Fotos que apresentam a marca", "obs": "Referência de qualidade: os stills que a Alyê já tem do Brutus e do Disparatte. A ideia é levar esse padrão para um cenário natalino. As fotos de catálogo também servem depois para a revenda."}, {"id": "artes", "title": "Artes que contam quem é a Alyê", "obs": "Formatos do plano: 4:5 para feed, 9:16 para Reels e stories, 16:9 para site. O guia de presentes também pode ser usado depois pelos revendedores."}, {"id": "cronograma", "title": "Do sim ao dia 25", "obs": "As datas dependem da aprovação do conceito e do roteiro. O teaser já está pronto e funciona como convite para o coquetel de 03/12. A campanha de Natal entra logo depois do lançamento. A campanha de revenda pode vir na sequência. A Black Friday (27/11) também está no calendário do plano anual e pode ser tratada à parte."}, {"id": "precisamos", "title": "O que precisamos da Alyê", "obs": "Com estes pontos definidos até 21/11, a gravação se mantém entre 24 e 26/11."}, {"id": "fechamento", "title": "Vamos começar?", "obs": "Próximos passos: aprovação do conceito e do roteiro, e definição da data da gravação."}];
 const secs=[...document.querySelectorAll('#stage>section')];
 let cur=0;
 const KEY=id=>'alye-natal-notas-'+id;
