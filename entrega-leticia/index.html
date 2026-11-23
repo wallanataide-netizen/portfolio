@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="icone.png">
+<meta name="description" content="Letícia · Ensaio 15 anos — suas fotos editadas em alta resolução. Wallan Estúdio.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wallan Estúdio">
+<meta property="og:title" content="Letícia · 15 Anos · Suas fotos chegaram">
+<meta property="og:description" content="Veja o seu ensaio e baixe as fotos editadas em alta resolução.">
+<meta property="og:url" content="https://wallanataide-netizen.github.io/portfolio/entrega-leticia/">
+<meta property="og:image" content="https://wallanataide-netizen.github.io/portfolio/entrega-leticia/capa.jpg?v=1">
+<meta property="og:image:secure_url" content="https://wallanataide-netizen.github.io/portfolio/entrega-leticia/capa.jpg?v=1">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://wallanataide-netizen.github.io/portfolio/entrega-leticia/capa.jpg?v=1">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="apple-touch-icon" href="icone.png">
+<title>Letícia · 15 Anos · Wallan Estúdio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0a; --bg2:#131313; --card:#1a1a1a; --line:#2a2a2a;
+    --ink:#f5f5f5; --muted:#9a9a9a; --gold:#FCB704; --gold2:#FFC933;
+    --serif:"Cormorant Garamond", Georgia, serif; --sans:"Montserrat", system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  html,body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;-webkit-font-smoothing:antialiased}
+  img{display:block;-webkit-user-drag:none}
+  a{color:inherit}
+  button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+  .hidden{display:none!important}
+
+  /* ---------- capa ---------- */
+  .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;overflow:hidden;padding:0 22px 9vh}
+  .hero .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 30%;transform:scale(1.06);animation:slow 18s ease-out forwards}
+  @keyframes slow{to{transform:scale(1)}}
+  .hero::after{content:"";position:absolute;inset:0;background:
+     linear-gradient(180deg,rgba(10,10,10,.55) 0%,rgba(10,10,10,.05) 28%,rgba(10,10,10,.25) 55%,rgba(10,10,10,.92) 86%,#0a0a0a 100%)}
+  .hero > *{position:relative;z-index:1}
+  .top{position:absolute;top:0;left:0;right:0;z-index:2;display:flex;justify-content:center;padding:28px 20px}
+  .top img{height:46px;width:auto}
+  .kicker{font-size:11px;letter-spacing:.5em;color:var(--gold2);font-weight:500;padding-left:.5em;opacity:0;animation:up .9s .2s ease forwards}
+  .name{font-family:var(--serif);font-weight:500;font-size:clamp(54px,11vw,112px);line-height:.95;margin-top:14px;opacity:0;animation:up 1s .35s ease forwards}
+  .name i{font-style:italic;font-weight:400;color:var(--gold2)}
+  .rule{width:56px;height:1px;background:var(--gold);opacity:.7;margin:22px auto 18px}
+  .lead{max-width:540px;color:#d6d6d6;font-size:15px;line-height:1.75;opacity:0;animation:up 1s .55s ease forwards}
+  .lead b{color:var(--ink);font-weight:500}
+  @keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  .cta{display:inline-flex;align-items:center;gap:12px;background:var(--gold);color:#111;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding:17px 30px;border-radius:999px;text-decoration:none;transition:filter .2s,transform .2s;box-shadow:0 12px 34px rgba(252,183,4,.22)}
+  .cta:hover{filter:brightness(1.07);transform:translateY(-1px)}
+  .cta svg{width:19px;height:19px;stroke:#111;fill:none;stroke-width:2}
+  .hero .cta{margin-top:28px;opacity:0;animation:up 1s .75s ease forwards}
+  .chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:18px;opacity:0;animation:up 1s .9s ease forwards}
+  .chips span{font-size:11px;letter-spacing:.12em;color:var(--muted);border:1px solid rgba(255,255,255,.14);padding:7px 13px;border-radius:999px;background:rgba(10,10,10,.35);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+  .scroll{margin-top:30px;font-size:10px;letter-spacing:.4em;color:var(--muted);text-decoration:none;opacity:0;animation:up 1s 1.1s ease forwards}
+
+  /* ---------- seções ---------- */
+  section.block{max-width:1100px;margin:0 auto;padding:70px 22px 10px}
+  .eyebrow{font-size:11px;letter-spacing:.32em;color:var(--gold);font-weight:600;text-align:center}
+  h2{font-family:var(--serif);font-weight:500;font-size:clamp(34px,5vw,46px);text-align:center;margin-top:10px;line-height:1.1}
+  .sub{text-align:center;color:var(--muted);font-size:14px;line-height:1.75;max-width:600px;margin:12px auto 0}
+
+  .letter{max-width:680px;margin:0 auto;padding:80px 22px 10px;text-align:center}
+  .letter p{font-family:var(--serif);font-size:clamp(21px,2.6vw,25px);line-height:1.6;color:#e8e8e8;font-style:italic}
+  .letter .sig{margin-top:20px;font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.35em;color:var(--gold)}
+
+  /* ---------- como baixar ---------- */
+  .how{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+  .card{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:24px 24px 22px}
+  .card h3{display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--ink)}
+  .card h3 svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.6}
+  .card ol{list-style:none;counter-reset:s;margin-top:16px;display:grid;gap:11px}
+  .card li{counter-increment:s;display:grid;grid-template-columns:26px 1fr;gap:10px;font-size:13.5px;line-height:1.6;color:#cfcfcf}
+  .card li::before{content:counter(s);width:24px;height:24px;border-radius:50%;border:1px solid var(--gold);color:var(--gold2);font-size:11px;font-weight:600;display:grid;place-items:center;margin-top:1px}
+  .card li b{color:var(--ink);font-weight:500}
+  .center{text-align:center;margin-top:30px}
+  .tip{max-width:760px;margin:22px auto 0;background:var(--bg2);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:16px 20px;font-size:13px;line-height:1.75;color:var(--muted)}
+  .tip b{color:var(--ink);font-weight:500}
+
+  /* ---------- galeria ---------- */
+  .gal{max-width:1320px;margin:34px auto 0;padding:0 18px;columns:4 250px;column-gap:12px}
+  .tile{break-inside:avoid;margin-bottom:12px;position:relative;border-radius:6px;overflow:hidden;background:var(--card);cursor:zoom-in}
+  .tile img{width:100%;height:auto;transition:transform .7s ease;opacity:0}
+  .tile img.ok{opacity:1;transition:opacity .5s ease, transform .7s ease}
+  .tile:hover img{transform:scale(1.03)}
+  .tile .num{position:absolute;left:10px;bottom:10px;font-size:10.5px;letter-spacing:.14em;color:#fff;background:rgba(10,10,10,.6);padding:4px 9px;border-radius:999px;opacity:0;transition:opacity .3s}
+  .tile:hover .num{opacity:1}
+
+  /* ---------- visualizador ---------- */
+  .lb{position:fixed;inset:0;z-index:50;background:#070707;display:flex;flex-direction:column}
+  .lb-top{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;gap:12px}
+  .lb-top .pos{font-size:12px;letter-spacing:.14em;color:var(--muted)}
+  .lb-stage{flex:1;position:relative;display:flex;align-items:center;justify-content:center;min-height:0;padding:0 64px}
+  .lb-stage img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+  .nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);background:rgba(20,20,20,.7)}
+  .nav:hover{border-color:var(--gold)}
+  .nav svg{width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:1.6}
+  .nav.prev{left:10px}.nav.next{right:10px}
+  .lb-bottom{display:flex;justify-content:center;padding:16px 18px 22px}
+  .lb-dl{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--gold);color:var(--gold2);padding:12px 24px;border-radius:999px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;text-decoration:none}
+  .lb-dl svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8}
+  .x{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line)}
+  .x svg{width:16px;height:16px;stroke:var(--ink);stroke-width:1.6}
+
+  /* ---------- final ---------- */
+  .final{max-width:760px;margin:80px auto 0;padding:0 22px 70px;text-align:center}
+  .final .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+  .ghost{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);color:var(--ink);font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:14px 22px;border-radius:999px;text-decoration:none;transition:border-color .2s}
+  .ghost:hover{border-color:var(--gold)}
+  .ghost svg{width:17px;height:17px;flex:none}
+
+  .ft{border-top:1px solid var(--line);background:linear-gradient(180deg,#0d0d0d,#060606)}
+  .ft::before{content:"";display:block;height:2px;width:90px;margin:0 auto;background:var(--gold)}
+  .ft-in{max-width:1180px;margin:0 auto;padding:46px 24px 30px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+  .ft-brand img{height:44px;width:auto;display:inline-block}
+  .ft-name{font-size:10.5px;letter-spacing:.45em;color:var(--muted);margin-top:10px;font-weight:500}
+  .ft-brand p{margin-top:14px;color:var(--muted);font-size:13px;line-height:1.7;max-width:320px}
+  .ft-col h4{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px}
+  .ft-col a,.ft-col span{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-size:13.5px;margin-bottom:11px}
+  .ft-col a:hover{color:var(--gold)}
+  .ft-col svg{width:17px;height:17px;flex:none;fill:currentColor;stroke:currentColor;stroke-width:1.6}
+  .ft-col .ft-txt{display:block;color:var(--muted);font-size:13px;line-height:1.7}
+  .ft-bot{max-width:1180px;margin:0 auto;padding:18px 24px 26px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:11px;letter-spacing:.06em;color:#6e6e6e}
+
+  @media (max-width:760px){
+    .how{grid-template-columns:1fr}
+    .ft-in{grid-template-columns:1fr;gap:26px;text-align:center;padding-top:38px}
+    .ft-brand p{margin-left:auto;margin-right:auto}.ft-brand img{margin:0 auto}.ft-col a,.ft-col span{justify-content:center}.ft-bot{justify-content:center;text-align:center}
+  }
+  @media (max-width:640px){
+    .top img{height:38px}
+    .hero{padding-bottom:7vh}
+    .hero .bgimg{object-position:62% 35%}
+    .cta{padding:16px 24px;font-size:12px}
+    .gal{columns:2 150px;column-gap:8px;padding:0 10px}.tile{margin-bottom:8px}
+    .lb-stage{padding:0 6px}.nav{width:40px;height:40px;background:rgba(20,20,20,.55)}
+    section.block{padding-top:56px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= CAPA ================= -->
+<header class="hero">
+  <img class="bgimg" src="fotos/15.jpg" alt="Letícia a cavalo em frente ao castelo">
+  <div class="top"><img src="logo.png" alt="Wallan Estúdio"></div>
+  <div class="kicker">ENSAIO · 15 ANOS</div>
+  <h1 class="name">Letícia <i>XV</i></h1>
+  <div class="rule"></div>
+  <p class="lead">Suas fotos estão <b>prontas</b>. Todas editadas, tratadas e em <b>alta resolução</b>, do jeito certo para imprimir e guardar para sempre.</p>
+  <a class="cta" id="ctaTop" href="#" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 19h16"/></svg>Baixar minhas fotos
+  </a>
+  <div class="chips"><span id="chipN">35 FOTOS</span><span>ALTA RESOLUÇÃO</span><span>PRONTAS PARA IMPRESSÃO</span></div>
+  <a class="scroll" href="#galeria">VER AS FOTOS ↓</a>
+</header>
+
+<!-- ================= CARTA ================= -->
+<div class="letter">
+  <p>Letícia, foi uma alegria registrar esse capítulo tão especial da sua história. Cada foto aqui foi pensada e tratada com carinho para que você possa reviver esse dia sempre que quiser.</p>
+  <div class="sig">COM CARINHO, WALLAN ESTÚDIO</div>
+</div>
+
+<!-- ================= GALERIA ================= -->
+<section class="block" id="galeria" style="max-width:none;padding-left:0;padding-right:0">
+  <div class="eyebrow">GALERIA</div>
+  <h2>Seu ensaio</h2>
+  <p class="sub">Toque em qualquer foto para ver em tela cheia. Os arquivos para baixar estão no botão dourado, em resolução completa.</p>
+  <div class="gal" id="gal"></div>
+</section>
+
+<!-- ================= COMO BAIXAR ================= -->
+<section class="block" id="baixar">
+  <div class="eyebrow">DOWNLOAD</div>
+  <h2>Como baixar as fotos</h2>
+  <p class="sub">As fotos ficam guardadas numa pasta no Google Drive. Você não precisa ter conta para baixar.</p>
+  <div class="how">
+    <div class="card">
+      <h3><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>No computador</h3>
+      <ol>
+        <li><span>Toque em <b>Baixar minhas fotos</b>. A pasta vai abrir no Google Drive.</span></li>
+        <li><span>No alto da pasta, clique em <b>Fazer download</b> (ou na setinha ao lado do nome da pasta → <b>Fazer download</b>).</span></li>
+        <li><span>O Drive prepara um arquivo <b>.zip</b> com todas as fotos. Depois é só abrir o arquivo baixado.</span></li>
+      </ol>
+    </div>
+    <div class="card">
+      <h3><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>No celular</h3>
+      <ol>
+        <li><span>Toque em <b>Baixar minhas fotos</b>. A pasta abre no navegador ou no app do Google Drive.</span></li>
+        <li><span>Abra a foto, toque nos <b>três pontinhos ⋮</b> e escolha <b>Fazer download</b> ou <b>Enviar uma cópia → Salvar imagem</b>.</span></li>
+        <li><span>Para baixar todas de uma vez, o mais rápido é pelo <b>computador</b>.</span></li>
+      </ol>
+    </div>
+  </div>
+  <div class="tip"><b>Para imprimir:</b> leve os arquivos originais baixados do Drive, nunca um print de tela nem a foto reenviada pelo WhatsApp, que perde qualidade. Os arquivos aguentam ampliações grandes com ótima nitidez.</div>
+  <div class="center"><a class="cta" id="ctaMid" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 19h16"/></svg>Baixar minhas fotos</a></div>
+</section>
+
+<!-- ================= FINAL ================= -->
+<div class="final">
+  <div class="eyebrow">OBRIGADO</div>
+  <h2>Gostou do resultado?</h2>
+  <p class="sub">Vai postar? Marca a gente no Instagram, a gente adora ver as fotos no seu perfil. E qualquer dúvida para baixar ou imprimir, chama no WhatsApp.</p>
+  <div class="row">
+    <a class="ghost" href="https://instagram.com/wallan_estudio" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@wallan_estudio</a>
+    <a class="ghost" href="https://wa.me/5584987795227?text=Ol%C3%A1%2C%20Wallan!%20Recebi%20as%20fotos%20do%20meu%20ensaio%20de%2015%20anos%20%F0%9F%92%9B" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>(84) 98779-5227</a>
+  </div>
+</div>
+
+<footer class="ft">
+  <div class="ft-in">
+    <div class="ft-brand">
+      <img src="logo.png" alt="Wallan Estúdio">
+      <div class="ft-name">WALLAN ESTÚDIO</div>
+      <p>Fotografia, filmes e produção audiovisual para eventos, marcas e momentos que merecem ser eternizados.</p>
+    </div>
+    <div class="ft-col">
+      <h4>Contato</h4>
+      <a href="https://wa.me/5584987795227" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>(84) 98779-5227</a>
+      <a href="https://instagram.com/wallan_estudio" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@wallan_estudio</a>
+      <a href="https://wallanataide-netizen.github.io/portfolio/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/><circle cx="12" cy="12" r="9"/></svg>Portfólio online</a>
+      <span><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rio Grande do Norte</span>
+    </div>
+    <div class="ft-col">
+      <h4>Sobre esta entrega</h4>
+      <span class="ft-txt">As fotos desta página são prévias leves para visualização. Os arquivos finais, em resolução completa e sem marca d'água, estão no botão "Baixar minhas fotos".</span>
+    </div>
+  </div>
+  <div class="ft-bot"><span>© 2026 Wallan Estúdio · Todos os direitos reservados</span><span>Letícia · Ensaio 15 anos · Picuí</span></div>
+</footer>
+
+<!-- ================= VISUALIZADOR ================= -->
+<div class="lb hidden" id="lb">
+  <div class="lb-top">
+    <span class="pos" id="lbPos"></span>
+    <button class="x" id="lbClose" aria-label="Fechar"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <div class="lb-stage" id="lbStage">
+    <img id="lbImg" alt="">
+    <button class="nav prev" id="lbPrev" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="nav next" id="lbNext" aria-label="Próxima"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+  <div class="lb-bottom"><a class="lb-dl" id="lbDl" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 19h16"/></svg><span id="lbDlTxt">Baixar em alta resolução</span></a></div>
+</div>
+
+<script>
+/* ================= CONFIGURAÇÃO ================= */
+const CONFIG = {
+  linkDrive: "https://drive.google.com/drive/folders/19h3WulRew7xJKhfzs9wLeJUcT1kpDRUE?usp=sharing",
+  total: 35
+};
+const SIZES = {"01":[720,480],"02":[720,480],"03":[720,480],"04":[480,720],"05":[480,720],"06":[480,720],"07":[480,720],"08":[720,480],"09":[720,480],"10":[720,480],"11":[720,480],"12":[480,720],"13":[480,720],"14":[720,480],"15":[720,483],"16":[480,720],"17":[480,720],"18":[480,720],"19":[480,720],"20":[720,480],"21":[720,483],"22":[720,480],"23":[720,480],"24":[720,480],"25":[480,720],"26":[480,720],"27":[480,720],"28":[480,720],"29":[480,720],"30":[720,570],"31":[480,720],"32":[480,720],"33":[720,480],"34":[480,720],"35":[480,720]};
+const FOTOS = Array.from({length:CONFIG.total},(_,i)=>String(i+1).padStart(2,"0"));
+
+const $ = s => document.querySelector(s);
+["#ctaTop","#ctaMid","#lbDl"].forEach(s=>$(s).href = CONFIG.linkDrive);
+$("#chipN").textContent = CONFIG.total + " FOTOS";
+
+/* galeria */
+$("#gal").innerHTML = FOTOS.map((id,i)=>{
+  const [w,h] = SIZES[id] || [720,480];
+  return `<div class="tile" data-i="${i}"><img src="mini/${id}.jpg" width="${w}" height="${h}" alt="Letícia 15 anos, foto ${id}" loading="lazy" onload="this.classList.add('ok')"><span class="num">FOTO ${id}</span></div>`;
+}).join("");
+$("#gal").addEventListener("click", e=>{ const t=e.target.closest(".tile"); if(t) abrir(+t.dataset.i); });
+
+/* visualizador */
+const lb = $("#lb"); let atual = 0;
+function abrir(i){ atual=i; lb.classList.remove("hidden"); document.body.style.overflow="hidden"; mostrar(); }
+function fechar(){ lb.classList.add("hidden"); document.body.style.overflow=""; }
+function mostrar(){
+  const id = FOTOS[atual], img = $("#lbImg");
+  img.style.opacity=.25; img.onload=()=>{img.style.transition="opacity .25s";img.style.opacity=1;};
+  img.src = `fotos/${id}.jpg`;
+  $("#lbPos").textContent = `FOTO ${id} · ${atual+1} / ${FOTOS.length}`;
+  $("#lbDlTxt").textContent = `Baixar em alta · arquivo ${id}`;
+  [atual-1, atual+1].forEach(k=>{ if(FOTOS[k]) (new Image()).src=`fotos/${FOTOS[k]}.jpg`; });
+}
+function passo(d){ atual=(atual+d+FOTOS.length)%FOTOS.length; mostrar(); }
+$("#lbPrev").onclick=()=>passo(-1); $("#lbNext").onclick=()=>passo(1); $("#lbClose").onclick=fechar;
+document.addEventListener("keydown", e=>{
+  if(lb.classList.contains("hidden")) return;
+  if(e.key==="ArrowLeft") passo(-1); else if(e.key==="ArrowRight") passo(1); else if(e.key==="Escape") fechar();
+});
+let tx=null; const st=$("#lbStage");
+st.addEventListener("touchstart",e=>{tx=e.touches[0].clientX},{passive:true});
+st.addEventListener("touchend",e=>{ if(tx===null) return; const dx=e.changedTouches[0].clientX-tx; if(Math.abs(dx)>45) passo(dx<0?1:-1); tx=null; });
+</script>
+</body>
+</html>
