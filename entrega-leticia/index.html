@@ -72,6 +72,10 @@
   .hero .cta{margin-top:28px;opacity:0;animation:up 1s .75s ease forwards}
   .chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:18px;opacity:0;animation:up 1s .9s ease forwards}
   .chips span{font-size:11px;letter-spacing:.12em;color:var(--muted);border:1px solid rgba(255,255,255,.14);padding:7px 13px;border-radius:999px;background:rgba(10,10,10,.35);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.prazo{display:inline-flex;align-items:center;gap:10px;margin-top:18px;font-size:12.5px;line-height:1.5;color:#f0f0f0;background:rgba(252,183,4,.12);border:1px solid rgba(252,183,4,.55);padding:9px 16px;border-radius:999px;opacity:0;animation:up 1s 1s ease forwards;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+  .prazo svg{width:16px;height:16px;stroke:var(--gold2);fill:none;stroke-width:1.8;flex:none}
+  .prazo b{color:var(--gold2);font-weight:600}
+  .tip.warn{border-left-color:var(--gold2);background:rgba(252,183,4,.07)}
   .scroll{margin-top:30px;font-size:10px;letter-spacing:.4em;color:var(--muted);text-decoration:none;opacity:0;animation:up 1s 1.1s ease forwards}
 
   /* ---------- seções ---------- */
@@ -173,6 +177,7 @@
     <svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 19h16"/></svg>Baixar minhas fotos
   </a>
   <div class="chips"><span id="chipN">35 FOTOS</span><span>ALTA RESOLUÇÃO</span><span>PRONTAS PARA IMPRESSÃO</span></div>
+  <div class="prazo"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Disponível no Drive por <b>30 dias</b> (até 23/12/2026). Baixe e guarde uma cópia.</span></div>
   <a class="scroll" href="#galeria">VER AS FOTOS ↓</a>
   </div>
 </header>
@@ -214,6 +219,7 @@
       </ol>
     </div>
   </div>
+  <div class="tip warn"><b>Importante: as fotos ficam disponíveis no Google Drive por 30 dias</b>, até <b>23 de dezembro de 2026</b>. Depois desse prazo a pasta é removida. Baixe todas e guarde uma cópia no computador, no celular ou num HD externo.</div>
   <div class="tip"><b>Para imprimir:</b> leve os arquivos originais baixados do Drive, nunca um print de tela nem a foto reenviada pelo WhatsApp, que perde qualidade. Os arquivos aguentam ampliações grandes com ótima nitidez.</div>
   <div class="center"><a class="cta" id="ctaMid" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 19h16"/></svg>Baixar minhas fotos</a></div>
 </section>
@@ -245,7 +251,7 @@
     </div>
     <div class="ft-col">
       <h4>Sobre esta entrega</h4>
-      <span class="ft-txt">As fotos desta página são prévias leves para visualização. Os arquivos finais, em resolução completa e sem marca d'água, estão no botão "Baixar minhas fotos".</span>
+      <span class="ft-txt">As fotos desta página são prévias leves para visualização. Os arquivos finais, em resolução completa e sem marca d'água, estão no botão "Baixar minhas fotos". A pasta fica disponível por 30 dias.</span>
     </div>
   </div>
   <div class="ft-bot"><span>© 2026 Wallan Estúdio · Todos os direitos reservados</span><span>Letícia · Ensaio 15 anos · Picuí</span></div>
